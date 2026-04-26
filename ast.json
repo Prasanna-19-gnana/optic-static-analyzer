@@ -1,0 +1,351 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "FunctionDeclaration",
+      "name": "compute_data",
+      "returnType": "int",
+      "params": [],
+      "body": {
+        "type": "BlockStatement",
+        "body": [
+          {
+            "type": "VariableDeclaration",
+            "name": "unused_var",
+            "varType": "int",
+            "init": {
+              "type": "Literal",
+              "value": 999,
+              "raw": "999",
+              "line": 2
+            },
+            "line": 2
+          },
+          {
+            "type": "VariableDeclaration",
+            "name": "a",
+            "varType": "int",
+            "init": {
+              "type": "BinaryExpression",
+              "operator": "+",
+              "left": {
+                "type": "BinaryExpression",
+                "operator": "*",
+                "left": {
+                  "type": "Literal",
+                  "value": 10,
+                  "raw": "10",
+                  "line": 3
+                },
+                "right": {
+                  "type": "Literal",
+                  "value": 5,
+                  "raw": "5",
+                  "line": 3
+                },
+                "line": 3
+              },
+              "right": {
+                "type": "BinaryExpression",
+                "operator": "/",
+                "left": {
+                  "type": "Literal",
+                  "value": 20,
+                  "raw": "20",
+                  "line": 3
+                },
+                "right": {
+                  "type": "Literal",
+                  "value": 4,
+                  "raw": "4",
+                  "line": 3
+                },
+                "line": 3
+              },
+              "line": 3
+            },
+            "line": 3
+          },
+          {
+            "type": "VariableDeclaration",
+            "name": "b",
+            "varType": "int",
+            "init": {
+              "type": "BinaryExpression",
+              "operator": "*",
+              "left": {
+                "type": "Literal",
+                "value": 100,
+                "raw": "100",
+                "line": 4
+              },
+              "right": {
+                "type": "Literal",
+                "value": 2,
+                "raw": "2",
+                "line": 4
+              },
+              "line": 4
+            },
+            "line": 4
+          },
+          {
+            "type": "VariableDeclaration",
+            "name": "x",
+            "varType": "int",
+            "init": {
+              "type": "BinaryExpression",
+              "operator": "+",
+              "left": {
+                "type": "Identifier",
+                "name": "a",
+                "line": 5
+              },
+              "right": {
+                "type": "Identifier",
+                "name": "b",
+                "line": 5
+              },
+              "line": 5
+            },
+            "line": 5
+          },
+          {
+            "type": "VariableDeclaration",
+            "name": "y",
+            "varType": "int",
+            "init": {
+              "type": "BinaryExpression",
+              "operator": "+",
+              "left": {
+                "type": "Identifier",
+                "name": "a",
+                "line": 6
+              },
+              "right": {
+                "type": "Identifier",
+                "name": "b",
+                "line": 6
+              },
+              "line": 6
+            },
+            "line": 6
+          },
+          {
+            "type": "IfStatement",
+            "test": {
+              "type": "Literal",
+              "value": 0,
+              "raw": "0",
+              "line": 7
+            },
+            "consequent": {
+              "type": "BlockStatement",
+              "body": [
+                {
+                  "type": "ExpressionStatement",
+                  "expression": {
+                    "type": "AssignmentExpression",
+                    "operator": "=",
+                    "left": {
+                      "type": "Identifier",
+                      "name": "x",
+                      "line": 8
+                    },
+                    "right": {
+                      "type": "BinaryExpression",
+                      "operator": "+",
+                      "left": {
+                        "type": "Identifier",
+                        "name": "x",
+                        "line": 8
+                      },
+                      "right": {
+                        "type": "Literal",
+                        "value": 1000,
+                        "raw": "1000",
+                        "line": 8
+                      },
+                      "line": 8
+                    },
+                    "line": 8
+                  },
+                  "line": 8
+                },
+                {
+                  "type": "ExpressionStatement",
+                  "expression": {
+                    "type": "AssignmentExpression",
+                    "operator": "=",
+                    "left": {
+                      "type": "Identifier",
+                      "name": "y",
+                      "line": 9
+                    },
+                    "right": {
+                      "type": "BinaryExpression",
+                      "operator": "*",
+                      "left": {
+                        "type": "Identifier",
+                        "name": "y",
+                        "line": 9
+                      },
+                      "right": {
+                        "type": "Literal",
+                        "value": 2,
+                        "raw": "2",
+                        "line": 9
+                      },
+                      "line": 9
+                    },
+                    "line": 9
+                  },
+                  "line": 9
+                }
+              ],
+              "line": 7
+            },
+            "alternate": null,
+            "line": 7
+          },
+          {
+            "type": "VariableDeclaration",
+            "name": "result",
+            "varType": "int",
+            "init": {
+              "type": "Literal",
+              "value": 0,
+              "raw": "0",
+              "line": 11
+            },
+            "line": 11
+          },
+          {
+            "type": "ForStatement",
+            "init": {
+              "type": "VariableDeclaration",
+              "name": "i",
+              "varType": "int",
+              "init": {
+                "type": "Literal",
+                "value": 0,
+                "raw": "0",
+                "line": 12
+              },
+              "line": 12
+            },
+            "condition": {
+              "type": "BinaryExpression",
+              "operator": "<",
+              "left": {
+                "type": "Identifier",
+                "name": "i",
+                "line": 12
+              },
+              "right": {
+                "type": "Literal",
+                "value": 10,
+                "raw": "10",
+                "line": 12
+              },
+              "line": 12
+            },
+            "update": {
+              "type": "AssignmentExpression",
+              "operator": "=",
+              "left": {
+                "type": "Identifier",
+                "name": "i",
+                "line": 12
+              },
+              "right": {
+                "type": "BinaryExpression",
+                "operator": "+",
+                "left": {
+                  "type": "Identifier",
+                  "name": "i",
+                  "line": 12
+                },
+                "right": {
+                  "type": "Literal",
+                  "value": 1,
+                  "raw": "1",
+                  "line": 12
+                },
+                "line": 12
+              },
+              "line": 12
+            },
+            "body": {
+              "type": "BlockStatement",
+              "body": [
+                {
+                  "type": "ExpressionStatement",
+                  "expression": {
+                    "type": "AssignmentExpression",
+                    "operator": "=",
+                    "left": {
+                      "type": "Identifier",
+                      "name": "result",
+                      "line": 13
+                    },
+                    "right": {
+                      "type": "BinaryExpression",
+                      "operator": "+",
+                      "left": {
+                        "type": "BinaryExpression",
+                        "operator": "+",
+                        "left": {
+                          "type": "Identifier",
+                          "name": "result",
+                          "line": 13
+                        },
+                        "right": {
+                          "type": "BinaryExpression",
+                          "operator": "*",
+                          "left": {
+                            "type": "Identifier",
+                            "name": "x",
+                            "line": 13
+                          },
+                          "right": {
+                            "type": "Identifier",
+                            "name": "y",
+                            "line": 13
+                          },
+                          "line": 13
+                        },
+                        "line": 13
+                      },
+                      "right": {
+                        "type": "Identifier",
+                        "name": "i",
+                        "line": 13
+                      },
+                      "line": 13
+                    },
+                    "line": 13
+                  },
+                  "line": 13
+                }
+              ],
+              "line": 12
+            },
+            "line": 12
+          },
+          {
+            "type": "ReturnStatement",
+            "argument": {
+              "type": "Identifier",
+              "name": "result",
+              "line": 15
+            },
+            "line": 15
+          }
+        ],
+        "line": 1
+      },
+      "line": 1
+    }
+  ]
+}

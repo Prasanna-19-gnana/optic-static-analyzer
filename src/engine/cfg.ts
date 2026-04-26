@@ -147,7 +147,8 @@ export function buildCFG(ast: ASTNode | null): CFGNode[] {
         const exitBlock = createNode(nodes);
         exitBlock.isExit = true;
         link(currentBlock, exitBlock);
-        currentBlock = createNode(nodes); // Unreachable block after return
+        // Mark current as terminated — do NOT create a ghost unreachable block
+        (currentBlock as any)._terminated = true;
       } else {
         // ExpressionStatement, VariableDeclaration, etc.
         currentBlock.statements.push(node);
@@ -163,10 +164,12 @@ export function buildCFG(ast: ASTNode | null): CFGNode[] {
       return nodes;
     }
 
-    // Add final exit
-    const finalExit = createNode(nodes);
-    finalExit.isExit = true;
-    link(currentBlock, finalExit);
+    // Only add final exit if the last block wasn't already terminated by a return
+    if (!(currentBlock as any)._terminated) {
+      const finalExit = createNode(nodes);
+      finalExit.isExit = true;
+      link(currentBlock, finalExit);
+    }
 
     // Reachability analysis (BFS from entry)
     const queue = [entry.id];

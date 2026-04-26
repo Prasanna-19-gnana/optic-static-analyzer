@@ -22,9 +22,11 @@ An advanced, production-grade static code analysis and optimization engine built
 ### 3. Dynamic "Dark IDE" Visualizations
 - **Three-Panel Layout:** A sleek, developer-focused Navy/Cyan theme with an integrated React-Simple-Code-Editor.
 - **Token Stream View:** Real-time visual layout of the Lexer's output.
-- **AST Hierarchical Viewer:** A custom SVG-based tree renderer that maps the deep nested structure of the code.
+- **AST Hierarchical Viewer:** A custom SVG-based tree renderer with **Virtualized DOM** to handle massive codebases with zero lag, featuring minimap and strict scroll isolation.
 - **CFG Layered Viewer:** An advanced SVG flow graph that maps branching logic, clearly distinguishing between reachable (cyan) and unreachable (red) code blocks.
+- **AST Compare Engine:** A robust, independent dual-pane virtualized visualizer implementing an O(N*K) Greedy Lookahead diff algorithm. Shows identical, added, and removed nodes between original and optimized syntax trees.
 - **Side-by-Side Diffs:** Suggestion cards that provide interactive "Before" and "After" code comparisons.
+- **Auto-Optimization Engine:** Click to automatically rewrite code, stripping unused variables, folding constants, and hoisting invariant code.
 - **Live Metrics Dashboard:** Tracks Tokens Parsed, AST/CFG Nodes, Analysis Time, Lines of Code, Cyclomatic Complexity, and Block Reachability dynamically.
 
 ### 4. Telemetry & Debugging
